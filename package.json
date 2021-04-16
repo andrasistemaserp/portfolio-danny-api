@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-danny-api",
+  "version": "1.0.0",
+  "description": "Portfolio Danny",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "populate": "node modules/populate/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jwks-rsa": "^2.0.2",
+    "mongoose": "^5.12.3",
+    "request": "^2.88.2",
+    "slugify": "^1.5.0",
+    "unique-slug": "^2.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
