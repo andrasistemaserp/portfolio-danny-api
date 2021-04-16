@@ -14,6 +14,12 @@ async function runServer() {
   server.use('/api/v1/portfolios', require('./modules/routes/portfolios'))
   server.use('/api/v1/blogs', require('./modules/routes/blogs'))
 
+  server.get('/', function(req, res, next) {
+    // res.status(200).send({status: 200, mensagem: [{mensagem: 'Servidor ativo e aguardando instrução.'}]});
+    // res.json({message: 'Welcome to Portfolio API Application'});
+    res.sendFile('index.html', {root: __dirname})
+  });
+    
   const PORT = parseInt(process.env.PORT, 10) || 3001
   server.listen(PORT, (err) => {
     if (err) console.log(err)
